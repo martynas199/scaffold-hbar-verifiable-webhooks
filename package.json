@@ -1,0 +1,32 @@
+{
+  "name": "sh",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Scaffold-HBAR template for privacy-preserving, tamper-evident webhook audit trails.",
+  "workspaces": {
+    "packages": [
+      "packages/nextjs"
+    ]
+  },
+  "scripts": {
+    "dev": "yarn next:dev",
+    "build": "yarn next:build",
+    "lint": "yarn next:lint",
+    "typecheck": "yarn next:typecheck",
+    "test": "yarn next:test",
+    "check": "yarn typecheck && yarn lint && yarn test && yarn build",
+    "next:dev": "yarn workspace @sh/nextjs dev",
+    "next:build": "yarn workspace @sh/nextjs build",
+    "next:lint": "yarn workspace @sh/nextjs lint",
+    "next:typecheck": "yarn workspace @sh/nextjs typecheck",
+    "next:test": "yarn workspace @sh/nextjs test",
+    "topic:create": "yarn workspace @sh/nextjs topic:create",
+    "evidence:create": "yarn workspace @sh/nextjs evidence:create",
+    "evidence:verify": "yarn workspace @sh/nextjs evidence:verify",
+    "self-check": "node scripts/self-check.mjs"
+  },
+  "packageManager": "yarn@3.2.3",
+  "engines": {
+    "node": ">=20.18.3"
+  }
+}

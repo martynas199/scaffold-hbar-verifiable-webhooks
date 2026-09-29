@@ -1,0 +1,59 @@
+{
+  "name": "verifiable-webhooks",
+  "description": "Tamper-evident SaaS webhook audit trail using Hedera Consensus Service and Mirror Node verification.",
+  "create-scaffold-hbar": {
+    "capabilities": {
+      "frontend": [
+        "nextjs-app"
+      ],
+      "solidityFramework": [
+        "none"
+      ],
+      "packageManager": [
+        "yarn",
+        "npm"
+      ]
+    },
+    "defaults": {
+      "frontend": "nextjs-app",
+      "solidityFramework": "none",
+      "packageManager": "npm"
+    },
+    "outro": {
+      "sections": [
+        {
+          "steps": [
+            {
+              "text": "This template anchors privacy-preserving webhook proofs to Hedera Consensus Service. No smart-contract deployment is required."
+            }
+          ]
+        },
+        {
+          "title": "Next steps",
+          "steps": [
+            {
+              "label": "Copy the environment file",
+              "command": "cp packages/nextjs/.env.example packages/nextjs/.env.local"
+            },
+            {
+              "label": "Add a funded Hedera testnet operator",
+              "url": "https://portal.hedera.com"
+            },
+            {
+              "label": "Create the audit topic",
+              "command": "{run:topic:create}"
+            },
+            {
+              "label": "Start the app",
+              "command": "{run:dev}"
+            },
+            {
+              "label": "Anchor and verify a demo event",
+              "command": "{run:evidence:create}"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
