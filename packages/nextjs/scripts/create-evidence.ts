@@ -7,6 +7,8 @@ import { loadLocalEnv } from "./load-env";
 
 loadLocalEnv();
 
+async function main() {
+
 const topicId = process.env.HEDERA_AUDIT_TOPIC_ID;
 if (!topicId) {
   console.error("HEDERA_AUDIT_TOPIC_ID is missing. Run npm run topic:create first and add the id to .env.local.");
@@ -45,3 +47,6 @@ try {
   console.error(error instanceof Error ? error.message : error);
   process.exit(1);
 }
+
+}
+void main();

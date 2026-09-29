@@ -4,6 +4,7 @@ import { loadLocalEnv } from "./load-env";
 
 loadLocalEnv();
 
+async function main() {
 try {
   const result = await createAuditTopic();
   console.log(JSON.stringify({
@@ -16,3 +17,6 @@ try {
   console.error(error instanceof Error ? error.message : error);
   process.exit(1);
 }
+
+}
+void main();

@@ -9,9 +9,9 @@
     "lint": "eslint . --max-warnings=0",
     "typecheck": "tsc --noEmit",
     "test": "node --import tsx --test tests/*.test.ts",
-    "topic:create": "tsx scripts/create-topic.ts",
-    "evidence:create": "tsx scripts/create-evidence.ts",
-    "evidence:verify": "tsx scripts/verify-evidence.ts"
+    "topic:create": "node --import tsx scripts/create-topic.ts",
+    "evidence:create": "node --import tsx scripts/create-evidence.ts",
+    "evidence:verify": "node --import tsx scripts/verify-evidence.ts"
   },
   "dependencies": {
     "@hiero-ledger/sdk": "^2.80.0",

@@ -3,6 +3,8 @@ import { loadLocalEnv } from "./load-env";
 
 loadLocalEnv();
 
+async function main() {
+
 const args = process.argv.slice(2);
 const txIndex = args.indexOf("--transaction-id");
 const transactionId = txIndex >= 0 ? args[txIndex + 1] : undefined;
@@ -31,3 +33,6 @@ try {
   console.error(error instanceof Error ? error.message : error);
   process.exit(1);
 }
+
+}
+void main();
