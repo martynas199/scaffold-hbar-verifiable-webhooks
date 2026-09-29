@@ -9,7 +9,7 @@ This file is deliberately safe to keep public. Do **not** paste private keys, po
 ## One-command scaffold
 
 ```bash
-npx create-scaffold-hbar@latest --template martynas199/scaffold-hbar-verifiable-webhooks
+npx create-scaffold-hbar@latest --template martynas199/scaffold-hbar-verifiable-webhooks --solidity-framework none --frontend nextjs-app --package-manager npm
 ```
 
 ## Testnet evidence

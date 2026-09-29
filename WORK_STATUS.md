@@ -38,15 +38,18 @@ Work Mode verification on 29 September 2026 (Node 24.19.0, npm 11.9.0):
 - `node scripts/self-check.mjs`: passed.
 - Test script now uses `node --import tsx --test` to avoid the tsx CLI IPC requirement.
 
-Not yet verified: public-repository scaffold generation, live HTTP smoke test, Hedera testnet transaction and Mirror Node evidence. GitHub returned 404 for the intended repository; the available GitHub integration has no repository-creation operation. No submission or payout has been completed.
+## Publication and public scaffold verification
 
-## Account-bound steps still required
+- Public repository created: https://github.com/martynas199/scaffold-hbar-verifiable-webhooks
+- Source uploaded to main.
+- Public `create-scaffold-hbar` generation completed successfully with explicit frontend, Solidity-framework and package-manager options.
+- Fresh generated-project dependency install, typecheck, lint, all 6 tests, production build and self-check passed.
+- Fixed ESLint global ignores for generated Next.js declarations and build output after the fresh scaffold exposed a lint failure.
 
-1. Create a new public GitHub repository named `scaffold-hbar-verifiable-webhooks` under `martynas199` (the connected GitHub tools can edit repositories but cannot create one).
-2. Push this prepared repository into it.
-3. Run the public one-command scaffold and full install/lint/typecheck/test/build gate.
-4. Create or use a funded Hedera **testnet** operator account. Account creation requires accepting Hedera's terms and controlling the testnet private key.
-5. Run `topic:create`, add the topic id to `.env.local`, then run `evidence:create` and `evidence:verify`.
-6. Paste the public Hashscan/Mirror Node evidence into `SUBMISSION.md` and submit the official form/dev-ex survey.
+## Still required
 
-Do not put the Hedera private key in GitHub, this document, or the bounty submission.
+1. Create or sign in to a Hedera testnet account; signup requires the user's email verification and agreement to terms.
+2. Configure testnet operator credentials securely, create the topic, submit the demo proof and independently verify Mirror Node evidence.
+3. Add public evidence to SUBMISSION.md and complete the official submission/survey.
+
+No live testnet evidence, bounty submission or payout has been completed. Do not put the Hedera private key in GitHub or the submission.

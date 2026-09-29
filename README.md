@@ -18,10 +18,10 @@ The raw event can stay in your normal application database. Hedera provides the 
 
 ## Scaffold it
 
-After this repository is public on GitHub:
+Create a project from this public repository:
 
 ```bash
-npx create-scaffold-hbar@latest --template martynas199/scaffold-hbar-verifiable-webhooks
+npx create-scaffold-hbar@latest --template martynas199/scaffold-hbar-verifiable-webhooks --solidity-framework none --frontend nextjs-app --package-manager npm
 ```
 
 The template declares Next.js, no Solidity framework and npm in `template.json`.
@@ -221,11 +221,11 @@ See `SECURITY.md` for deployment guidance.
 - [x] Mirror Node independent verification
 - [x] No committed secrets or `.env`
 - [x] Install/lint/test/build scripts
-- [ ] Public GitHub repository URL
+- [x] Public GitHub repository URL
 - [ ] Real testnet transaction + Hashscan/Mirror Node evidence
 - [ ] Final developer-experience survey/submission
 
-The final three items are account-bound publication/evidence steps and are documented in `SUBMISSION.md`.
+The remaining items are account-bound publication/evidence steps and are documented in `SUBMISSION.md`.
 
 ## License
 
